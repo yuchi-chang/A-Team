@@ -1,3 +1,4 @@
+
 # A-Team
 
 一組運行在 Claude Code 上的團隊設計師 agent 系統。透過深度對話釐清你的需求，自動產出完整的 multi-agent 團隊結構（agents / skills / rules）。
