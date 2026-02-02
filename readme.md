@@ -2,6 +2,7 @@
 
 ## A-Team: Agent-Based Team Designer for Claude Agents
 
+```text
 team-designer-claude/          ← 整個資料夾複製到你的 .claude/ 中即可
 ├── agents/
 │   ├── team-architect.md              ← 總調度者
@@ -29,3 +30,4 @@ team-designer-claude/          ← 整個資料夾複製到你的 .claude/ 中�
 ├── output-structure.md            ← 產出目錄規範
 ├── conversation-protocol.md       ← 對話流程規範
 └── writing-quality-standard.md    ← 撰寫品質規範
+```
