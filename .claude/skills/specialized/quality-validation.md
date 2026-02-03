@@ -1,3 +1,8 @@
+---
+name: Quality Validation
+description: 提供驗證最終產出團隊結構是否完整且一致的檢查方法
+---
+
 # Quality Validation（產出品質驗證）
 
 ## 描述

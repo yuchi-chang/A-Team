@@ -1,3 +1,8 @@
+---
+name: Granularity Calibration
+description: 提供量化評估 agent 拆分顆粒度是否合適的方法
+---
+
 # Granularity Calibration（顆粒度校準）
 
 ## 描述

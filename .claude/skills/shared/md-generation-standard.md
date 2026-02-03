@@ -1,3 +1,8 @@
+---
+name: MD Generation Standard
+description: 定義所有 .md 檔案的通用寫作標準、格式規範和品質要求
+---
+
 # MD Generation Standard（.md 檔案生成標準）
 
 ## 描述
@@ -11,6 +16,35 @@
 - `rule-writer`：撰寫 rule .md 時遵循
 
 ## 通用格式規範
+
+### YAML Frontmatter
+
+所有 .md 檔案必須以 YAML frontmatter 開頭，格式如下：
+
+**Agent 文件：**
+```yaml
+---
+name: {Agent 名稱，英文}
+description: {一句話描述，繁體中文}
+model: opus 4.5
+---
+```
+
+**Skill 文件：**
+```yaml
+---
+name: {Skill 名稱，英文}
+description: {一句話描述，繁體中文}
+---
+```
+
+**Rule 文件：**
+```yaml
+---
+name: {Rule 名稱，英文}
+description: {一句話描述，繁體中文}
+---
+```
 
 ### 檔案命名
 - 使用 kebab-case：`content-reviewer.md`，不使用 `contentReviewer.md` 或 `content_reviewer.md`
@@ -37,6 +71,7 @@
 ## 品質檢查清單
 
 每個 .md 檔案交付前必須通過：
+- [ ] 檔案開頭有正確格式的 YAML frontmatter（包含 name 和 description，agent 額外包含 model）
 - [ ] 檔案有且僅有一個 h1 標題
 - [ ] 所有引用的檔案路徑真實存在
 - [ ] 沒有使用「盡量」「適當」「合理」等模糊詞（除非附有判斷標準）

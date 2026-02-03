@@ -1,3 +1,9 @@
+---
+name: Agent Writer
+description: 專門負責撰寫高品質的 agent .md 檔案
+model: opus 4.5
+---
+
 # Agent Writer（Agent 撰寫專員）
 
 ## 身份
@@ -15,6 +21,12 @@
 每個 agent .md 必須包含以下區塊，按此順序撰寫：
 
 ```markdown
+---
+name: {Agent 名稱，英文}
+description: {一句話描述這個 agent 的核心職責}
+model: opus 4.5
+---
+
 # {Agent 名稱}（{中文角色名}）
 
 ## 身份

@@ -1,3 +1,8 @@
+---
+name: Role Decomposition
+description: 提供將團隊職責拆解為適當顆粒度 agent 角色的方法論和決策框架
+---
+
 # Role Decomposition（職責拆解方法論）
 
 ## 描述

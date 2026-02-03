@@ -1,3 +1,8 @@
+---
+name: Team Topology Analysis
+description: 提供分析團隊結構合理性的框架，評估 agent 間協作拓撲的效率
+---
+
 # Team Topology Analysis（團隊拓撲分析）
 
 ## 描述

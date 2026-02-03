@@ -1,3 +1,8 @@
+---
+name: Structured Interview
+description: 提供深度訪談方法論，用於從模糊描述中提取明確可操作的需求
+---
+
 # Structured Interview（結構化訪談）
 
 ## 描述

@@ -1,3 +1,8 @@
+---
+name: Output Structure
+description: 規範所有產出團隊結構的目錄配置和命名規則
+---
+
 # Output Structure（產出資料夾結構規範）
 
 ## 適用範圍

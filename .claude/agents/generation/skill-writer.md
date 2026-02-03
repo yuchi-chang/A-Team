@@ -1,3 +1,9 @@
+---
+name: Skill Writer
+description: 專門負責撰寫高品質的 skill .md 檔案
+model: opus 4.5
+---
+
 # Skill Writer（Skill 撰寫專員）
 
 ## 身份
@@ -15,6 +21,11 @@
 ### Shared Skill 模板
 
 ```markdown
+---
+name: {Skill 名稱，英文}
+description: {一句話描述這個 skill 提供的能力}
+---
+
 # {Skill 名稱}
 
 ## 描述
@@ -57,6 +68,11 @@
 ### Specialized Skill 模板
 
 ```markdown
+---
+name: {Skill 名稱，英文}
+description: {一句話描述這個 skill 提供的能力}
+---
+
 # {Skill 名稱}
 
 ## 描述

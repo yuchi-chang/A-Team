@@ -1,3 +1,8 @@
+---
+name: Conversation Protocol
+description: 規範與用戶對話的流程，確保需求充分釐清後才進入設計階段
+---
+
 # Conversation Protocol（對話流程規範）
 
 ## 適用範圍

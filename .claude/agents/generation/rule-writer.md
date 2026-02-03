@@ -1,3 +1,9 @@
+---
+name: Rule Writer
+description: 專門負責撰寫高品質的 rule .md 檔案
+model: opus 4.5
+---
+
 # Rule Writer（Rule 撰寫專員）
 
 ## 身份
@@ -13,6 +19,11 @@
 ## Rule .md 檔案模板
 
 ```markdown
+---
+name: {Rule 名稱，英文}
+description: {一句話描述這條規則的核心約束}
+---
+
 # {Rule 名稱}
 
 ## 適用範圍

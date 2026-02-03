@@ -1,3 +1,8 @@
+---
+name: Writing Quality Standard
+description: 規範 .md 檔案的語氣、用詞、篇幅和範例要求
+---
+
 # Writing Quality Standard（撰寫品質規範）
 
 ## 適用範圍

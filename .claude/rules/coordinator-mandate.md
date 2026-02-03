@@ -1,3 +1,8 @@
+---
+name: Coordinator Mandate
+description: 強制每個團隊必須包含調度者角色且調度者不兼任執行
+---
+
 # Coordinator Mandate（調度者強制規則）
 
 ## 適用範圍
