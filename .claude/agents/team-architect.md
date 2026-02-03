@@ -71,8 +71,10 @@ project-root/
         │   └── {group-b}/
         │       └── ...
         ├── skills/
-        │   ├── shared/
-        │   └── specialized/
+        │   ├── {skill-1}/
+        │   │   └── SKILL.md
+        │   └── {skill-2}/
+        │       └── SKILL.md
         └── rules/
 ```
 

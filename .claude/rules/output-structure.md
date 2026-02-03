@@ -25,10 +25,12 @@ teams/{team-name}/
 │   └── {group-b}/
 │       └── {agent-3}.md
 ├── skills/
-│   ├── shared/                   ← 被多個 agent 共用的技能
-│   │   └── {skill-1}.md
-│   └── specialized/              ← 專屬於特定 agent 的技能
-│       └── {skill-2}.md
+│   ├── {skill-1}/                ← 每個 skill 一個資料夾
+│   │   └── SKILL.md              ← 固定檔名（大寫）
+│   ├── {skill-2}/
+│   │   └── SKILL.md
+│   └── {skill-3}/
+│       └── SKILL.md
 └── rules/
     ├── {rule-1}.md
     └── {rule-2}.md
@@ -45,15 +47,14 @@ teams/{team-name}/
 
 - 調度者 .md 必須位於 `agents/` 根目錄，不可放入子資料夾
 - 非調度者 agent 必須位於 `agents/` 的子資料夾中
-- Shared skills 位於 `skills/shared/`
-- Specialized skills 位於 `skills/specialized/`
+- 每個 skill 必須有獨立資料夾，資料夾內放置 `SKILL.md`（大寫）
 - 所有 rules 位於 `rules/` 根目錄，rules 不設子資料夾
 
 ## 違反判定
 
 - 調度者 .md 出現在子資料夾中 → 違反
 - 非調度者 agent 直接放在 `agents/` 根目錄（與調度者同級）→ 違反
-- skills 目錄缺少 `shared/` 或 `specialized/` 子目錄 → 違反
+- skill 直接以 `.md` 檔案存在而非 `{skill-name}/SKILL.md` 格式 → 違反
 - 檔案或資料夾名稱不符合 kebab-case → 違反
 
 ## 例外情況

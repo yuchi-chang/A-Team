@@ -16,9 +16,21 @@ model: opus 4.5
 - **可操作性。** 讀完一個 skill 後，agent 應該能立即按照步驟執行，不需要額外查找資訊。
 - **最小充分原則。** 只包含 agent 完成任務所需的資訊，不多不少。Claude 本身已經很聰明，只需要補充它不知道的領域知識和特定流程。
 
-## Skill .md 檔案模板
+## Skill 檔案結構
 
-### Shared Skill 模板
+每個 skill 必須放在獨立資料夾中，資料夾名稱為 skill 名稱（kebab-case），內含 `SKILL.md` 檔案：
+
+```
+skills/
+├── {skill-name-1}/
+│   └── SKILL.md
+├── {skill-name-2}/
+│   └── SKILL.md
+└── {skill-name-3}/
+    └── SKILL.md
+```
+
+## SKILL.md 檔案模板
 
 ```markdown
 ---
@@ -34,9 +46,15 @@ description: {一句話描述這個 skill 提供的能力}
 
 ## 使用者
 
+{列出使用此 skill 的 agent，如果是專屬 skill 則標明歸屬}
+
+### 共用 skill 格式：
 本 skill 被以下 agent 使用：
 - {agent-1}：{使用場景}
 - {agent-2}：{使用場景}
+
+### 專屬 skill 格式：
+本 skill 專屬於 `agents/{path}/{agent-name}.md`
 
 ## 核心知識
 
@@ -53,54 +71,11 @@ description: {一句話描述這個 skill 提供的能力}
 ### 場景 A：{場景描述}
 {具體的操作步驟或決策框架}
 
-### 場景 B：{場景描述}
-{具體的操作步驟或決策框架}
-
-## 範例
-
-### 輸入
-{典型輸入範例}
-
-### 輸出
-{期望的輸出範例}
-```
-
-### Specialized Skill 模板
-
-```markdown
----
-name: {Skill 名稱，英文}
-description: {一句話描述這個 skill 提供的能力}
----
-
-# {Skill 名稱}
-
-## 描述
-
-{一段話說明這個 skill 提供什麼能力}
-
-## 歸屬
-
-本 skill 專屬於 `agents/{path}/{agent-name}.md`
-
-## 核心知識
-
-{同 shared skill 的核心知識區塊}
-
-## 工作流程
-
-{使用此 skill 時的具體步驟}
-
-1. {Step 1}：{描述}
-2. {Step 2}：{描述}
-...
-
 ## 品質檢查點
 
 {使用此 skill 產出結果後的自我檢查清單}
 - [ ] {檢查項 1}
 - [ ] {檢查項 2}
-...
 
 ## 範例
 

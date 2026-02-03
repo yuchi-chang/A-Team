@@ -32,12 +32,12 @@ teams/{team-name}/
 │   └── {group-b}/
 │       └── ...
 ├── skills/
-│   ├── shared/
-│   │   ├── {skill-1}.md
-│   │   └── {skill-2}.md
-│   └── specialized/
-│       ├── {skill-3}.md
-│       └── {skill-4}.md
+│   ├── {skill-1}/
+│   │   └── SKILL.md
+│   ├── {skill-2}/
+│   │   └── SKILL.md
+│   └── {skill-3}/
+│       └── SKILL.md
 └── rules/
     ├── {rule-1}.md
     └── {rule-2}.md

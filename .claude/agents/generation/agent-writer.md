@@ -51,9 +51,8 @@ model: opus 4.5
 
 ## 可用技能
 
-{列出這個 agent 可以使用的 skills，包含 shared 和 specialized}
-- `skills/shared/{skill-name}.md`：{一句話描述}
-- `skills/specialized/{skill-name}.md`：{一句話描述}
+{列出這個 agent 可以使用的 skills}
+- `skills/{skill-name}/SKILL.md`：{一句話描述}
 
 ## 適用規則
 

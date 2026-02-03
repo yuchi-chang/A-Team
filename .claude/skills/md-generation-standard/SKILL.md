@@ -65,8 +65,10 @@ description: {一句話描述，繁體中文}
 
 ### 路徑引用
 - 引用其他檔案時使用相對路徑
-- 路徑格式：`{type}/{category}/{filename}.md`
-- 範例：`skills/shared/structured-interview.md`
+- Skill 路徑格式：`skills/{skill-name}/SKILL.md`
+- Agent 路徑格式：`agents/{group}/{agent-name}.md`
+- Rule 路徑格式：`rules/{rule-name}.md`
+- 範例：`skills/structured-interview/SKILL.md`
 
 ## 品質檢查清單
 

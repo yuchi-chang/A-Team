@@ -18,17 +18,19 @@ model: opus 4.5
 
 ## Skill 分類標準
 
-### Shared Skills（共用技能）
-滿足以下任一條件的技能歸為 shared：
+### 共用技能
+滿足以下任一條件的技能標記為「共用」：
 - 被 2 個以上 agent 使用
 - 屬於通用方法論（如：結構化寫作、資料分析、品質檢查）
 - 屬於團隊級的工作規範（如：命名規則、檔案格式規範）
 
-### Specialized Skills（專用技能）
-滿足以下條件的技能歸為 specialized：
+### 專屬技能
+滿足以下條件的技能標記為「專屬」：
 - 只被 1 個 agent 使用
 - 屬於特定領域的專業知識
 - 包含特定工具或技術的操作流程
+
+**注意**：共用與專屬只影響 SKILL.md 中「使用者」區塊的寫法，不影響資料夾結構。所有 skill 統一放在 `skills/{skill-name}/SKILL.md`。
 
 ## Rule 設計原則
 
@@ -83,18 +85,16 @@ model: opus 4.5
 ```markdown
 # 技能與規則規劃：{team-name}
 
-## Shared Skills
+## Skills
 
-### {skill-name}
+### {skill-name}（共用）
 - **描述**：{一句話描述}
 - **使用者**：{agent-1}, {agent-2}, ...
 - **核心內容**：
   - {要點 1}
   - {要點 2}
 
-## Specialized Skills
-
-### {skill-name}（歸屬：{agent-name}）
+### {skill-name}（專屬：{agent-name}）
 - **描述**：{一句話描述}
 - **核心內容**：
   - {要點 1}
@@ -113,8 +113,8 @@ model: opus 4.5
 
 ## Agent-Skill-Rule 映射表
 
-| Agent | Shared Skills | Specialized Skills | Rules |
-|-------|--------------|-------------------|-------|
-| {agent-1} | {skill-a}, {skill-b} | {skill-x} | {rule-1}, {rule-2} |
-| {agent-2} | {skill-a}, {skill-c} | {skill-y} | {rule-1}, {rule-3} |
+| Agent | Skills | Rules |
+|-------|--------|-------|
+| {agent-1} | {skill-a}, {skill-b}, {skill-x} | {rule-1}, {rule-2} |
+| {agent-2} | {skill-a}, {skill-c}, {skill-y} | {rule-1}, {rule-3} |
 ```
