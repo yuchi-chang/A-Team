@@ -1,32 +1,32 @@
 ---
 name: Output Structure
-description: 規範所有產出團隊結構的目錄配置和命名規則
+description: Specify directory configuration and naming rules for all generated team structures
 ---
 
-# Output Structure（產出資料夾結構規範）
+# Output Structure
 
-## 適用範圍
+## Applicability
 
-- 適用於：`generation-lead`, `agent-writer`, `skill-writer`, `rule-writer`
+- Applies to: `generation-lead`, `agent-writer`, `skill-writer`, `rule-writer`
 
-## 規則內容
+## Rule Content
 
-### 目錄結構
+### Directory Structure
 
-所有產出的團隊結構必須遵循以下目錄配置：
+All generated team structures must follow this directory configuration:
 
 ```
 teams/{team-name}/
 ├── agents/
-│   ├── {coordinator}.md          ← 調度者，位於 agents/ 根目錄
-│   ├── {group-a}/                ← 按職能或流程分組
+│   ├── {coordinator}.md          ← Coordinator, in agents/ root directory
+│   ├── {group-a}/                ← Grouped by function or workflow
 │   │   ├── {agent-1}.md
 │   │   └── {agent-2}.md
 │   └── {group-b}/
 │       └── {agent-3}.md
 ├── skills/
-│   ├── {skill-1}/                ← 每個 skill 一個資料夾
-│   │   └── SKILL.md              ← 固定檔名（大寫）
+│   ├── {skill-1}/                ← Each skill has its own folder
+│   │   └── SKILL.md              ← Fixed filename (uppercase)
 │   ├── {skill-2}/
 │   │   └── SKILL.md
 │   └── {skill-3}/
@@ -36,27 +36,27 @@ teams/{team-name}/
     └── {rule-2}.md
 ```
 
-### 命名規範
+### Naming Conventions
 
-- 團隊名稱：kebab-case，反映團隊用途（如 `english-teaching-content`）
-- 資料夾名稱：kebab-case
-- 檔案名稱：kebab-case，以 `.md` 結尾
-- 禁止使用空格、底線、大寫字母
+- Team name: kebab-case, reflecting team purpose (e.g., `english-teaching-content`)
+- Folder names: kebab-case
+- File names: kebab-case, ending with `.md`
+- Spaces, underscores, and uppercase letters are prohibited
 
-### 位置規範
+### Placement Rules
 
-- 調度者 .md 必須位於 `agents/` 根目錄，不可放入子資料夾
-- 非調度者 agent 必須位於 `agents/` 的子資料夾中
-- 每個 skill 必須有獨立資料夾，資料夾內放置 `SKILL.md`（大寫）
-- 所有 rules 位於 `rules/` 根目錄，rules 不設子資料夾
+- Coordinator .md must be in `agents/` root directory, cannot be placed in subfolders
+- Non-coordinator agents must be in subfolders under `agents/`
+- Each skill must have its own folder, containing `SKILL.md` (uppercase)
+- All rules are in `rules/` root directory, rules do not have subfolders
 
-## 違反判定
+## Violation Determination
 
-- 調度者 .md 出現在子資料夾中 → 違反
-- 非調度者 agent 直接放在 `agents/` 根目錄（與調度者同級）→ 違反
-- skill 直接以 `.md` 檔案存在而非 `{skill-name}/SKILL.md` 格式 → 違反
-- 檔案或資料夾名稱不符合 kebab-case → 違反
+- Coordinator .md appears in a subfolder → Violation
+- Non-coordinator agent placed directly in `agents/` root directory (same level as coordinator) → Violation
+- Skill exists directly as `.md` file instead of `{skill-name}/SKILL.md` format → Violation
+- File or folder name does not follow kebab-case → Violation
 
-## 例外情況
+## Exceptions
 
-- 如果團隊只有 1 個分組（例如所有 agent 都屬於同一個專業），仍然必須建立至少一個子資料夾，不可將所有 agent 直接放在 `agents/` 根目錄
+- If the team has only 1 group (e.g., all agents belong to the same specialty), at least one subfolder must still be created; agents cannot be placed directly in `agents/` root directory

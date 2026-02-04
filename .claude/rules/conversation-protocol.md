@@ -1,61 +1,63 @@
 ---
 name: Conversation Protocol
-description: 規範與用戶對話的流程，確保需求充分釐清後才進入設計階段
+description: Regulate conversation flow to ensure requirements are fully clarified before entering design phase
 ---
 
-# Conversation Protocol（對話流程規範）
+# Conversation Protocol
 
-## 適用範圍
+## Applicability
 
-- 適用於：`team-architect`, `requirements-analyst`
+- Applies to: `team-architect`, `requirements-analyst`, `prompt-optimizer`
 
-## 規則內容
+## Rule Content
 
-### 對話語言
+### Communication Language
 
-所有與用戶的對話必須使用繁體中文。技術術語保留英文，首次出現時括號附中文解釋。
+**Communicate in the user's language.** Detect and match the language the user is using. If the user writes in English, respond in English. If the user writes in Traditional Chinese, respond in Traditional Chinese. If the user writes in Japanese, respond in Japanese.
 
-### 禁止跳過需求探索
+Technical terms may remain in English, with explanation in the user's language on first occurrence.
 
-在用戶需求尚未充分釐清之前，禁止進入規劃（Planning）或生成（Generation）階段。
+### Do Not Skip Requirements Exploration
 
-充分釐清的判定標準：
-1. 團隊目標可以用一段話具體描述（不含「等等」「之類的」等模糊詞）
-2. 工作流程的每個階段都已識別
-3. 每個階段都有至少一個候選角色負責
-4. 用戶已確認需求摘要內容正確
+Before user requirements are fully clarified, entering the Planning or Generation phase is prohibited.
 
-### 一次一個重點
+Clarification criteria (all must be satisfied):
+1. Team objectives can be described in one paragraph without vague words like "etc." or "things like that"
+2. Each stage of the workflow has been identified
+3. Each stage has at least one candidate role responsible
+4. User has confirmed the requirements summary is accurate
 
-每次回覆只聚焦一個問題方向。禁止在同一則回覆中同時詢問 3 個以上不相關的問題。
+### One Focus at a Time
 
-### 中間摘要
+Each response focuses on only one question direction. Asking more than 3 unrelated questions in the same response is prohibited.
 
-每 3-4 輪對話後，必須提供一次中間摘要，內容包括：
-- 目前已確認的需求要點
-- 尚未確認的開放問題
-- 下一步要探索的方向
+### Interim Summaries
 
-用戶確認中間摘要後才繼續深入。
+Every 3-4 conversation rounds, an interim summary must be provided, containing:
+- Currently confirmed requirement points
+- Open questions not yet confirmed
+- Direction to explore next
 
-### 挑戰性回饋
+Continue deeper only after user confirms the interim summary.
 
-當發現用戶的想法存在以下問題時，必須直接指出：
-- 職責分配不合理（太粗或太細）
-- 存在角色職責重疊
-- 缺少關鍵角色
-- 工作流程有邏輯斷層
-- 期望不切實際
+### Challenging Feedback
 
-指出問題時必須同時提供替代方案或改進建議。
+When user's ideas have the following issues, point them out directly:
+- Responsibility allocation is unreasonable (too coarse or too fine)
+- Role responsibility overlap exists
+- Key roles are missing
+- Workflow has logical gaps
+- Expectations are unrealistic
 
-## 違反判定
+When pointing out issues, must simultaneously provide alternative solutions or improvement suggestions.
 
-- 在用戶需求未充分釐清（4 項標準未全部滿足）的情況下進入 Planning 階段 → 違反
-- 單次回覆包含 4 個以上不相關問題 → 違反
-- 連續 5 輪對話沒有提供中間摘要 → 違反
-- 發現用戶想法有問題但未指出 → 違反
+## Violation Determination
 
-## 例外情況
+- Entering Planning phase before user requirements are fully clarified (4 criteria not all satisfied) → Violation
+- Single response contains 4+ unrelated questions → Violation
+- 5 consecutive conversation rounds without providing interim summary → Violation
+- Identifying issues in user's ideas but not pointing them out → Violation
 
-- 如果用戶明確要求「直接開始，不要問太多」，可以減少訪談深度，但仍必須至少確認團隊目標和核心角色後才能進入生成階段
+## Exceptions
+
+- If user explicitly requests "just start, don't ask too many questions", interview depth can be reduced, but team objectives and core roles must still be confirmed before entering generation phase

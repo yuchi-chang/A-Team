@@ -1,43 +1,43 @@
 ---
 name: Granularity Calibration
-description: 提供量化評估 agent 拆分顆粒度是否合適的方法
+description: Provide quantitative methods for evaluating whether agent decomposition granularity is appropriate
 ---
 
-# Granularity Calibration（顆粒度校準）
+# Granularity Calibration
 
-## 描述
+## Description
 
-提供量化評估 agent 拆分顆粒度是否合適的方法，防止過度拆分或不足拆分。
+Provide quantitative methods for evaluating whether agent decomposition granularity is appropriate, preventing over-decomposition or under-decomposition.
 
-## 歸屬
+## Belongs To
 
-本 skill 專屬於 `agents/discovery/role-designer.md`
+This skill belongs exclusively to `agents/discovery/role-designer.md`
 
-## 校準方法
+## Calibration Methods
 
-### 職責重量評估
+### Responsibility Weight Assessment
 
-為每個 agent 的職責進行「重量」評估，確保團隊中各 agent 的重量大致均衡。
+Evaluate the "weight" of each agent's responsibilities to ensure weights are roughly balanced across team agents.
 
-評估維度：
-- **專業深度**：需要多深的領域知識？（淺/中/深）
-- **任務複雜度**：每個任務涉及多少步驟？（1-3 步/4-7 步/8+ 步）
-- **決策密度**：工作中需要做多少判斷性決策？（少/中/多）
+Assessment dimensions:
+- **Professional depth**: How deep is the domain knowledge required? (shallow/medium/deep)
+- **Task complexity**: How many steps does each task involve? (1-3 steps/4-7 steps/8+ steps)
+- **Decision density**: How many judgment-based decisions are made during work? (few/medium/many)
 
-### 平衡度判定
+### Balance Determination
 
-理想狀態：團隊中最「重」的 agent 和最「輕」的 agent 之間，重量差不超過一個等級。
+Ideal state: The difference between the "heaviest" and "lightest" agents in the team should not exceed one level.
 
-如果差距過大：
-- 過重的 agent → 考慮拆分為 2-3 個更專精的角色
-- 過輕的 agent → 考慮與相近角色合併，或擴展其職責範圍
+If the gap is too large:
+- Overweight agents → Consider splitting into 2-3 more specialized roles
+- Underweight agents → Consider merging with similar roles, or expanding their responsibility scope
 
-### 實用判定法
+### Practical Determination Method
 
-回答以下問題，如果答案大多為「是」，則顆粒度合適：
+Answer the following questions. If most answers are "yes", granularity is appropriate:
 
-1. 每個 agent 的核心職責能用一句話說清楚嗎？
-2. 移除任何一個 agent 後，是否有明確的工作會無人負責？
-3. agent 間的互動是否以「產出物交接」為主而非「持續討論」？
-4. 每個 agent 是否有明確且不同的品質評判標準？
-5. 調度者能否在不深入了解技術細節的情況下分配任務？
+1. Can each agent's core responsibility be clearly stated in one sentence?
+2. After removing any agent, is there clearly identifiable work that would have no one responsible?
+3. Are agent interactions primarily "deliverable handoffs" rather than "ongoing discussions"?
+4. Does each agent have distinct quality evaluation criteria?
+5. Can the coordinator assign tasks without needing to understand technical details?

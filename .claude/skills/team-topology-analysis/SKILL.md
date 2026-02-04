@@ -1,31 +1,31 @@
 ---
 name: Team Topology Analysis
-description: 提供分析團隊結構合理性的框架，評估 agent 間協作拓撲的效率
+description: Provide framework for analyzing team structure rationality and evaluating collaboration topology efficiency between agents
 ---
 
-# Team Topology Analysis（團隊拓撲分析）
+# Team Topology Analysis
 
-## 描述
+## Description
 
-提供分析團隊結構合理性的框架，用於評估 agent 間的協作拓撲是否高效、是否存在瓶頸或冗餘。
+Provide framework for analyzing team structure rationality, used to evaluate whether collaboration topology between agents is efficient and whether bottlenecks or redundancies exist.
 
-## 歸屬
+## Belongs To
 
-本 skill 專屬於 `agents/discovery/role-designer.md`
+This skill belongs exclusively to `agents/discovery/role-designer.md`
 
-## 核心知識
+## Core Knowledge
 
-### 拓撲模式
+### Topology Patterns
 
-#### 1. 鏈式拓撲（Pipeline）
+#### 1. Pipeline Topology
 ```
 A → B → C → D
 ```
-- 適用場景：工作有嚴格的先後順序
-- 優點：職責清晰、流程可預測
-- 風險：任何一個環節阻塞會導致全鏈停滯
+- Applicable scenario: Work has strict sequential order
+- Advantages: Clear responsibilities, predictable process
+- Risk: Any blocked node causes entire chain to stall
 
-#### 2. 星狀拓撲（Hub & Spoke）
+#### 2. Hub & Spoke Topology
 ```
     B
     ↑
@@ -33,27 +33,27 @@ A ← Coordinator → C
     ↓
     D
 ```
-- 適用場景：多個平行工作由調度者統籌
-- 優點：靈活分配、容易增減節點
-- 風險：調度者成為單點瓶頸
+- Applicable scenario: Multiple parallel work streams coordinated by one coordinator
+- Advantages: Flexible assignment, easy to add/remove nodes
+- Risk: Coordinator becomes single point of bottleneck
 
-#### 3. 混合拓撲
+#### 3. Hybrid Topology
 ```
 Coordinator → [GroupA: A1 → A2] → Review → [GroupB: B1, B2] → Final
 ```
-- 適用場景：複雜團隊，部分工作有順序、部分可平行
-- 通常是最終推薦的模式
+- Applicable scenario: Complex teams with some sequential work, some parallel
+- Usually the recommended final pattern
 
-### 拓撲健康度檢查
+### Topology Health Check
 
-1. **瓶頸檢測**：是否有某個 agent 同時是 3 個以上 agent 的上游？
-2. **孤島檢測**：是否有 agent 與團隊其他成員沒有任何互動？
-3. **迴圈檢測**：是否存在 A→B→C→A 的循環依賴？（review 迴圈除外）
-4. **調度者負載**：調度者直接管理的 agent 是否超過 7 個？超過建議設子調度者。
+1. **Bottleneck detection**: Is any agent the upstream of 3+ other agents simultaneously?
+2. **Island detection**: Is any agent without any interaction with other team members?
+3. **Cycle detection**: Does A→B→C→A circular dependency exist? (review cycles excluded)
+4. **Coordinator load**: Does coordinator directly manage more than 7 agents? If so, recommend sub-coordinators.
 
-## 品質檢查點
+## Quality Checkpoints
 
-- [ ] 每個 agent 至少有一個上游或下游連接
-- [ ] 調度者位於拓撲的邏輯中心
-- [ ] 沒有無意義的迴圈依賴
-- [ ] 平行工作的 agent 被正確分組
+- [ ] Every agent has at least one upstream or downstream connection
+- [ ] Coordinator is at the logical center of topology
+- [ ] No meaningless circular dependencies
+- [ ] Parallel work agents are correctly grouped

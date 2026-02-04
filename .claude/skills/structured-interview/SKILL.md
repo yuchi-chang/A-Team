@@ -1,48 +1,48 @@
 ---
 name: Structured Interview
-description: 提供深度訪談方法論，用於從模糊描述中提取明確可操作的需求
+description: Provide in-depth interview methodology for extracting clear actionable requirements from vague descriptions
 ---
 
-# Structured Interview（結構化訪談）
+# Structured Interview
 
-## 描述
+## Description
 
-提供深度訪談的方法論，用於從模糊的用戶描述中提取明確、可操作的需求。
+Provide in-depth interview methodology for extracting clear, actionable requirements from vague user descriptions.
 
-## 使用者
+## Users
 
-- `requirements-analyst`：用於需求探索階段的用戶訪談
-- `team-architect`：用於初步需求評估和方向確認
+- `requirements-analyst`: For user interviews during the requirements exploration phase
+- `team-architect`: For initial requirements assessment and direction confirmation
 
-## 核心方法
+## Core Methods
 
-### 漏斗式提問法
+### Funnel Questioning Method
 
-從寬到窄，逐步收斂：
+From broad to narrow, progressively converge:
 
-1. **開放式探索**：「你想達成什麼目標？」— 讓用戶自由描述
-2. **邊界確認**：「這個團隊不需要處理什麼？」— 排除法定義範圍
-3. **具體化追問**：「你說的 X 具體是指什麼？能舉個例子嗎？」— 消除歧義
-4. **驗證回放**：「我的理解是 Y，這樣對嗎？」— 確認共識
+1. **Open exploration**: "What goal do you want to achieve?" — Let users describe freely
+2. **Boundary confirmation**: "What does this team NOT need to handle?" — Define scope by exclusion
+3. **Concretization follow-up**: "What specifically do you mean by X? Can you give an example?" — Eliminate ambiguity
+4. **Verification playback**: "My understanding is Y, is that correct?" — Confirm consensus
 
-### 追問觸發條件
+### Follow-up Triggers
 
-遇到以下信號時必須追問：
-- 用戶使用模糊詞：「大概」「可能」「之類的」「等等」
-- 用戶跳過流程細節：直接說結果不說過程
-- 用戶的描述存在邏輯斷層：A 到 C 之間缺少 B
-- 用戶的需求存在隱含衝突：例如要求「快速」又要求「高品質」
+Must follow up when encountering these signals:
+- User uses vague words: "roughly", "probably", "things like that", "etc."
+- User skips process details: States results directly without explaining process
+- User's description has logical gaps: Missing B between A and C
+- User's requirements have implicit conflicts: Demanding both "fast" and "high quality"
 
-### 反向驗證法
+### Reverse Validation Method
 
-當用戶給出需求後，用反面問題驗證：
-- 「如果沒有 X 角色，哪些工作會沒人做？」
-- 「如果 Y 和 Z 合併成一個角色，會出什麼問題？」
-- 「這個團隊最可能失敗的原因是什麼？」
+After user provides requirements, validate with opposite questions:
+- "If role X didn't exist, which work would have no one doing it?"
+- "If Y and Z were merged into one role, what problems would arise?"
+- "What's the most likely reason this team would fail?"
 
-## 訪談節奏控制
+## Interview Rhythm Control
 
-- 每次回覆只聚焦一個方向，不同時問多個不相關的問題
-- 每 3-4 輪做一次中間摘要，確認方向正確
-- 訪談總輪數控制在 8-15 輪，視複雜度調整
-- 當用戶開始重複已說過的內容時，說明該維度已挖掘充分，轉向下一個維度
+- Focus each response on one direction only, don't ask multiple unrelated questions simultaneously
+- Provide an interim summary every 3-4 rounds to confirm direction is correct
+- Control total interview rounds to 8-15, adjusted by complexity
+- When user starts repeating previously stated content, that dimension is fully explored — move to next dimension

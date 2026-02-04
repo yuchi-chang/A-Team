@@ -1,54 +1,54 @@
 ---
 name: Writing Quality Standard
-description: 規範 .md 檔案的語氣、用詞、篇幅和範例要求
+description: Specify writing style, language requirements, and quality standards for all generated .md files
 ---
 
-# Writing Quality Standard（撰寫品質規範）
+# Writing Quality Standard
 
-## 適用範圍
+## Applicability
 
-- 適用於：`agent-writer`, `skill-writer`, `rule-writer`
+- Applies to: `agent-writer`, `skill-writer`, `rule-writer`, `prompt-optimizer`
 
-## 規則內容
+## Rule Content
 
-### 語氣與風格
+### Tone and Style
 
-所有產出的 .md 檔案必須使用祈使句作為主要語氣。
+All generated .md files must use imperative sentences as the primary tone.
 
-- 正確：「你必須在收到任務後先確認輸入完整性」
-- 錯誤：「這個角色應該在收到任務後確認輸入完整性」
-- 錯誤：「建議在收到任務後確認輸入完整性」
+- Correct: "You must confirm input completeness after receiving a task"
+- Incorrect: "This role should confirm input completeness after receiving a task"
+- Incorrect: "It is recommended to confirm input completeness after receiving a task"
 
-### 禁用模糊詞
+### Prohibited Vague Words
 
-以下詞彙禁止在 .md 檔案中使用，除非緊跟明確的判斷標準：
+The following words are prohibited in .md files unless immediately followed by clear judgment criteria:
 
-禁用詞列表：「盡量」「適當」「合理」「若有需要」「視情況」「大概」「可能」「之類的」
+Prohibited words: "try to", "appropriately", "reasonably", "if needed", "as appropriate", "roughly", "probably", "things like that"
 
-- 違反：「盡量保持程式碼品質」
-- 正確：「所有程式碼必須通過 linter 檢查且測試覆蓋率不低於 80%」
-- 允許：「合理的錯誤處理（定義：每個 public function 必須有 error return 且附帶 context）」
+- Violation: "Try to maintain code quality"
+- Correct: "All code must pass linter checks and have test coverage no less than 80%"
+- Allowed: "Reasonable error handling (defined as: every public function must have error return with context)"
 
-### 篇幅限制
+### Length Limits
 
-- 單個 agent .md：不超過 300 行
-- 單個 skill .md：不超過 200 行
-- 單個 rule .md：不超過 100 行
-- 如果內容超出限制，必須拆分為多個檔案或使用 references 引用
+- Single agent .md: No more than 300 lines
+- Single skill .md: No more than 200 lines
+- Single rule .md: No more than 100 lines
+- If content exceeds limits, must split into multiple files or use references for detailed content
 
-### 範例要求
+### Example Requirements
 
-- 每個 skill .md 必須包含至少一組輸入/輸出範例
-- 每個 rule .md 必須包含至少一組違反情境描述
+- Each skill .md must contain at least one input/output example
+- Each rule .md must contain at least one violation scenario description
 
-## 違反判定
+## Violation Determination
 
-- 使用了描述性語氣而非祈使句 → 違反
-- 出現禁用模糊詞且未附帶判斷標準 → 違反
-- 檔案超出篇幅限制 → 違反
-- skill .md 沒有範例 → 違反
-- rule .md 沒有違反判定 → 違反
+- Using descriptive tone instead of imperative sentences → Violation
+- Prohibited vague words appear without accompanying judgment criteria → Violation
+- File exceeds length limit → Violation
+- skill .md has no examples → Violation
+- rule .md has no violation determination → Violation
 
-## 例外情況
+## Exceptions
 
-本規則無例外。
+This rule has no exceptions.

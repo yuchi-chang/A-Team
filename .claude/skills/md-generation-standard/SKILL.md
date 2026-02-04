@@ -1,81 +1,81 @@
 ---
 name: MD Generation Standard
-description: 定義所有 .md 檔案的通用寫作標準、格式規範和品質要求
+description: Define universal writing standards, format specifications, and quality requirements for all .md files
 ---
 
-# MD Generation Standard（.md 檔案生成標準）
+# MD Generation Standard
 
-## 描述
+## Description
 
-定義所有 .md 檔案的通用寫作標準、格式規範和品質要求。所有 writer agent 在生成檔案時都必須遵守。
+Define universal writing standards, format specifications, and quality requirements for all .md files. All writer agents must follow these when generating files.
 
-## 使用者
+## Users
 
-- `agent-writer`：撰寫 agent .md 時遵循
-- `skill-writer`：撰寫 skill .md 時遵循
-- `rule-writer`：撰寫 rule .md 時遵循
+- `agent-writer`: Follow when writing agent .md files
+- `skill-writer`: Follow when writing skill .md files
+- `rule-writer`: Follow when writing rule .md files
 
-## 通用格式規範
+## Universal Format Specifications
 
 ### YAML Frontmatter
 
-所有 .md 檔案必須以 YAML frontmatter 開頭，格式如下：
+All .md files must begin with YAML frontmatter in the following format:
 
-**Agent 文件：**
+**Agent files:**
 ```yaml
 ---
-name: {Agent 名稱，英文}
-description: {一句話描述，繁體中文}
+name: {Agent name, English}
+description: {One sentence description}
 model: opus 4.5
 ---
 ```
 
-**Skill 文件：**
+**Skill files:**
 ```yaml
 ---
-name: {Skill 名稱，英文}
-description: {一句話描述，繁體中文}
+name: {Skill name, English}
+description: {One sentence description}
 ---
 ```
 
-**Rule 文件：**
+**Rule files:**
 ```yaml
 ---
-name: {Rule 名稱，英文}
-description: {一句話描述，繁體中文}
+name: {Rule name, English}
+description: {One sentence description}
 ---
 ```
 
-### 檔案命名
-- 使用 kebab-case：`content-reviewer.md`，不使用 `contentReviewer.md` 或 `content_reviewer.md`
-- 名稱應直接反映角色/技能/規則的核心功能
-- 保持簡潔，通常 2-4 個單詞
+### File Naming
+- Use kebab-case: `content-reviewer.md`, not `contentReviewer.md` or `content_reviewer.md`
+- Name should directly reflect the core function of the role/skill/rule
+- Keep concise, typically 2-4 words
 
-### 文件結構
-- 第一行必須是 `# 標題`（h1），整個檔案只能有一個 h1
-- 使用 `##`（h2）作為主要段落標題
-- 使用 `###`（h3）作為次要段落標題
-- 不使用 h4 以下的層級，避免過度嵌套
+### Document Structure
+- First line must be `# Title` (h1), entire file can only have one h1
+- Use `##` (h2) as main section headings
+- Use `###` (h3) as subsection headings
+- Do not use h4 or below, avoid excessive nesting
 
-### 語言規範
-- 主體內容使用繁體中文
-- 技術術語保留英文（如 agent, skill, rule, PR, CI/CD, API）
-- 技術術語首次出現時可括號附中文解釋，後續直接使用英文
-- 指令性內容使用祈使句（「你必須...」而非「應該...」）
+### Language Specifications
+- Content should match the user's language preference
+- Technical terms may remain in English (e.g., agent, skill, rule, PR, CI/CD, API)
+- Technical terms may have explanation in user's language on first occurrence, then use English directly
+- Instructional content uses imperative sentences ("You must..." not "should...")
 
-### 路徑引用
-- 引用其他檔案時使用相對路徑
-- Skill 路徑格式：`skills/{skill-name}/SKILL.md`
-- Agent 路徑格式：`agents/{group}/{agent-name}.md`
-- Rule 路徑格式：`rules/{rule-name}.md`
-- 範例：`skills/structured-interview/SKILL.md`
+### Path References
+- Use relative paths when referencing other files
+- Skill path format: `skills/{skill-name}/SKILL.md`
+- Agent path format: `agents/{group}/{agent-name}.md`
+- Rule path format: `rules/{rule-name}.md`
+- Example: `skills/structured-interview/SKILL.md`
 
-## 品質檢查清單
+## Quality Checklist
 
-每個 .md 檔案交付前必須通過：
-- [ ] 檔案開頭有正確格式的 YAML frontmatter（包含 name 和 description，agent 額外包含 model）
-- [ ] 檔案有且僅有一個 h1 標題
-- [ ] 所有引用的檔案路徑真實存在
-- [ ] 沒有使用「盡量」「適當」「合理」等模糊詞（除非附有判斷標準）
-- [ ] 單檔不超過 300 行
-- [ ] 沒有重複描述其他檔案已涵蓋的內容
+Each .md file must pass before delivery:
+- [ ] File begins with correctly formatted YAML frontmatter (including name and description, agents additionally include model)
+- [ ] File has exactly one h1 heading
+- [ ] All referenced file paths actually exist
+- [ ] No vague words like "try to", "appropriately", "reasonably" (unless followed by judgment criteria)
+- [ ] Single file does not exceed 300 lines
+- [ ] No duplicate descriptions of content already covered in other files

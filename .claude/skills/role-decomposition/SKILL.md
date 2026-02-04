@@ -1,57 +1,57 @@
 ---
 name: Role Decomposition
-description: 提供將團隊職責拆解為適當顆粒度 agent 角色的方法論和決策框架
+description: Provide methodology and decision framework for decomposing team responsibilities into agent roles with appropriate granularity
 ---
 
-# Role Decomposition（職責拆解方法論）
+# Role Decomposition
 
-## 描述
+## Description
 
-提供將團隊職責拆解為適當顆粒度 agent 角色的方法論和決策框架。
+Provide methodology and decision framework for decomposing team responsibilities into agent roles with appropriate granularity.
 
-## 使用者
+## Users
 
-- `role-designer`：用於角色設計階段的職責拆分
-- `team-architect`：用於驗收階段的結構合理性評估
+- `role-designer`: For responsibility decomposition during role design phase
+- `team-architect`: For structural rationality assessment during review phase
 
-## 核心框架：MECE 職責拆分
+## Core Framework: MECE Responsibility Decomposition
 
-每個 agent 的職責必須符合 MECE 原則：
-- **Mutually Exclusive（互斥）**：任何一項具體工作只應歸屬於一個 agent
-- **Collectively Exhaustive（窮盡）**：所有工作加總後不應有遺漏
+Each agent's responsibilities must follow the MECE principle:
+- **Mutually Exclusive**: Any specific work should belong to only one agent
+- **Collectively Exhaustive**: All work combined should have no omissions
 
-## 顆粒度校準方法
+## Granularity Calibration Method
 
-### 過粗的信號（需要拆分）
-- agent 的職責描述超過 5 項核心工作
-- agent 需要在兩個以上不同專業領域間切換
-- agent 的產出物類型超過 3 種
-- 用一句話無法概括這個 agent 是做什麼的
+### Signals of Too Coarse (Need to Split)
+- Agent's responsibility description exceeds 5 core work items
+- Agent needs to switch between 2+ different professional domains
+- Agent's output types exceed 3 kinds
+- Cannot summarize what this agent does in one sentence
 
-### 過細的信號（需要合併）
-- 兩個 agent 的輸入來源完全相同
-- 一個 agent 的產出物只有唯一一個下游消費者，且兩者的專業領域相同
-- 一個 agent 的工作量不足以獨立存在（只有 1-2 項簡單工作）
-- 拆分後兩個 agent 的每個任務都需要互相溝通
+### Signals of Too Fine (Need to Merge)
+- Two agents have identical input sources
+- One agent's output has only one downstream consumer, and both are in the same professional domain
+- One agent's workload is insufficient to exist independently (only 1-2 simple tasks)
+- After splitting, two agents need to communicate on every single task
 
-### 合適顆粒度的標誌
-- 每個 agent 可以用一句話清楚描述其核心職責
-- 每個 agent 有 3-5 項核心工作
-- agent 間的互動以「交付產出物」為主，而非「持續性討論」
-- 移除任何一個 agent 都會導致某類工作無人負責
+### Signs of Appropriate Granularity
+- Each agent can be clearly described with one sentence about their core responsibility
+- Each agent has 3-5 core work items
+- Agent interactions are primarily "deliverable handoffs" rather than "ongoing discussions"
+- Removing any agent would leave certain work with no one responsible
 
-## 分組策略
+## Grouping Strategy
 
-按優先順序選擇分組依據：
+Choose grouping criteria by priority:
 
-1. **工作流程階段**（最推薦）
-   - 適用場景：團隊工作有明確的前後順序
-   - 範例：discovery → planning → execution → review
+1. **Workflow stages** (Most recommended)
+   - Applicable scenario: Team work has clear sequential order
+   - Example: discovery → planning → execution → review
 
-2. **專業領域**
-   - 適用場景：團隊跨多個專業，但每個專業內流程相似
-   - 範例：content → technical → quality
+2. **Professional domains**
+   - Applicable scenario: Team spans multiple specialties, but processes within each are similar
+   - Example: content → technical → quality
 
-3. **產出物導向**
-   - 適用場景：團隊的產出物類型差異大
-   - 範例：code → documentation → visual-assets
+3. **Deliverable-oriented**
+   - Applicable scenario: Team's deliverable types are significantly different
+   - Example: code → documentation → visual-assets

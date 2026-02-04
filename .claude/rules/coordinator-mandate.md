@@ -1,34 +1,34 @@
 ---
 name: Coordinator Mandate
-description: 強制每個團隊必須包含調度者角色且調度者不兼任執行
+description: Mandatory rule that every generated team must have a coordinator role
 ---
 
-# Coordinator Mandate（調度者強制規則）
+# Coordinator Mandate
 
-## 適用範圍
+## Applicability
 
-- 適用於：所有 agent（設計團隊的所有成員都必須理解並遵守此規則）
+- Applies to: All agents (all members of the design team must understand and follow this rule)
 
-## 規則內容
+## Rule Content
 
-### 調度者必須存在
+### Coordinator Must Exist
 
-每一個產出的團隊結構中，必須包含至少一個調度者角色。調度者的 .md 檔案放置於 `agents/` 目錄的根層級（非子資料夾內）。
+Every generated team structure must contain at least one coordinator role. The coordinator's .md file is placed at the root level of the `agents/` directory (not inside subfolders).
 
-### 調度者不兼任執行
+### Coordinator Does Not Execute
 
-調度者角色只負責：任務規劃、任務分配、進度追蹤、品質把關。調度者不得同時承擔團隊中其他 agent 的執行職責。
+The coordinator role is only responsible for: task planning, task assignment, progress tracking, quality control. The coordinator must not simultaneously undertake execution responsibilities of other agents in the team.
 
-### 子調度者規則
+### Sub-Coordinator Rules
 
-當一個團隊的非調度者 agent 數量超過 7 個時，必須引入子調度者。子調度者由調度者管理，並管理其分組內的 agent。子調度者可以不兼任執行工作，但若其分組內 agent 數量 ≤ 3，允許子調度者同時承擔少量執行職責。
+When a team's non-coordinator agent count exceeds 7, sub-coordinators must be introduced. Sub-coordinators are managed by the coordinator and manage agents within their group. Sub-coordinators may not perform execution work, but if their group has ≤ 3 agents, sub-coordinators are allowed to undertake a small amount of execution responsibilities.
 
-## 違反判定
+## Violation Determination
 
-- 產出的團隊結構中 `agents/` 根目錄不存在任何調度者 .md 檔案 → 違反
-- 調度者的 .md 中「職責」區塊包含非調度職責的執行工作 → 違反
-- 團隊非調度者 agent 超過 7 個但沒有子調度者 → 違反
+- Generated team structure has no coordinator .md file in `agents/` root directory → Violation
+- Coordinator's .md has execution work (non-coordination responsibilities) in the "Responsibilities" section → Violation
+- Team has more than 7 non-coordinator agents but no sub-coordinators → Violation
 
-## 例外情況
+## Exceptions
 
-本規則無例外。
+This rule has no exceptions.

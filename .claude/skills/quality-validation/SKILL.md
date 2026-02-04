@@ -1,76 +1,76 @@
 ---
 name: Quality Validation
-description: 提供驗證最終產出團隊結構是否完整且一致的檢查方法
+description: Provide validation methods to check if final team structure output is complete and consistent
 ---
 
-# Quality Validation（產出品質驗證）
+# Quality Validation
 
-## 描述
+## Description
 
-提供驗證最終產出（整個團隊的 agents/skills/rules 結構）是否完整且一致的檢查方法。
+Provide validation methods to check if final output (entire team's agents/skills/rules structure) is complete and consistent.
 
-## 歸屬
+## Belongs To
 
-本 skill 專屬於 `agents/generation/generation-lead.md`
+This skill belongs exclusively to `agents/generation/generation-lead.md`
 
-## 驗證流程
+## Validation Process
 
-### Level 1: 結構完整性
-
-```
-✓ teams/{team-name}/ 目錄存在
-✓ agents/ 目錄存在且包含至少一個調度者 .md
-✓ skills/ 目錄存在且包含 shared/ 和 specialized/ 子目錄
-✓ rules/ 目錄存在且包含至少一個 .md 檔案
-✓ 所有 .md 檔案名稱使用 kebab-case
-✓ 所有 agent 分組資料夾名稱使用 kebab-case
-```
-
-### Level 2: 內容完整性
+### Level 1: Structural Completeness
 
 ```
-✓ 每個 agent .md 都包含：身份、職責、輸入與輸出、工作流程、可用技能、適用規則、協作關係、邊界
-✓ 調度者 .md 額外包含：團隊概覽、下屬 Agent 清單、任務分配策略、品質把關機制
-✓ 每個 skill .md 都包含：描述、使用者/歸屬、核心知識
-✓ 每個 rule .md 都包含：適用範圍、規則內容、違反判定
+✓ teams/{team-name}/ directory exists
+✓ agents/ directory exists and contains at least one coordinator .md
+✓ skills/ directory exists and contains skill folders
+✓ rules/ directory exists and contains at least one .md file
+✓ All .md file names use kebab-case
+✓ All agent group folder names use kebab-case
 ```
 
-### Level 3: 引用一致性
+### Level 2: Content Completeness
 
 ```
-✓ agent .md 中引用的每個 skill 路徑都對應到實際存在的檔案
-✓ agent .md 中引用的每個 rule 路徑都對應到實際存在的檔案
-✓ skill .md 中列出的使用者都對應到實際存在的 agent
-✓ rule .md 中的適用範圍都對應到實際存在的 agent
-✓ 調度者的下屬清單涵蓋所有非調度者 agent
+✓ Each agent .md contains: Identity, Responsibilities, Input and Output, Workflow, Available Skills, Applicable Rules, Collaboration Relationships, Boundaries
+✓ Coordinator .md additionally contains: Team Overview, Subordinate Agent List, Task Assignment Strategy, Quality Control Mechanism
+✓ Each skill .md contains: Description, Users/Belongs To, Core Knowledge
+✓ Each rule .md contains: Applicability, Rule Content, Violation Determination
 ```
 
-### Level 4: 邏輯一致性
+### Level 3: Reference Consistency
 
 ```
-✓ 沒有兩個 agent 的職責存在重疊（除非是設計為 review 關係）
-✓ 所有 agent 的職責加總後覆蓋團隊的完整工作範圍
-✓ 沒有 agent 同時出現在兩個不同的分組中
-✓ 協作關係是雙向一致的（A 說下游是 B，B 也應說上游是 A）
+✓ Each skill path referenced in agent .md corresponds to an actual existing file
+✓ Each rule path referenced in agent .md corresponds to an actual existing file
+✓ Users listed in skill .md correspond to actual existing agents
+✓ Applicability scope in rule .md corresponds to actual existing agents
+✓ Coordinator's subordinate list covers all non-coordinator agents
 ```
 
-## 驗證結果格式
+### Level 4: Logical Consistency
+
+```
+✓ No two agents have overlapping responsibilities (unless designed as review relationship)
+✓ All agent responsibilities combined cover the team's complete scope of work
+✓ No agent appears in two different groups simultaneously
+✓ Collaboration relationships are bidirectionally consistent (A says downstream is B, B should say upstream is A)
+```
+
+## Validation Result Format
 
 ```markdown
-# 品質驗證報告：{team-name}
+# Quality Validation Report: {team-name}
 
-## 結構完整性：✓ 通過 / ✗ 未通過
-{如未通過，列出具體問題}
+## Structural Completeness: ✓ Pass / ✗ Fail
+{If failed, list specific issues}
 
-## 內容完整性：✓ 通過 / ✗ 未通過
-{如未通過，列出具體問題}
+## Content Completeness: ✓ Pass / ✗ Fail
+{If failed, list specific issues}
 
-## 引用一致性：✓ 通過 / ✗ 未通過
-{如未通過，列出具體問題}
+## Reference Consistency: ✓ Pass / ✗ Fail
+{If failed, list specific issues}
 
-## 邏輯一致性：✓ 通過 / ✗ 未通過
-{如未通過，列出具體問題}
+## Logical Consistency: ✓ Pass / ✗ Fail
+{If failed, list specific issues}
 
-## 總結
-{通過 / 需修正，以及修正建議}
+## Summary
+{Pass / Needs correction, and correction recommendations}
 ```
