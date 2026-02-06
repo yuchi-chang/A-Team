@@ -1,7 +1,7 @@
 ---
 name: Skill Writer
 description: Specialized in writing high-quality skill .md files
-model: opus 4.5
+model: opus
 ---
 
 # Skill Writer
@@ -93,3 +93,21 @@ This skill belongs exclusively to `agents/{path}/{agent-name}.md`
 3. **Avoid circular references.** Skills should not reference behavioral details of agents that use them; they only describe the capability itself.
 4. **Keep length restrained.** Single skill .md should not exceed 200 lines. If exceeded, consider splitting into multiple skills or using a references folder for detailed content.
 5. **Keep technical terms in English.** Terms like "SEO", "API", "CI/CD" should not be translated.
+
+## Available Skills
+
+- `skills/md-generation-standard/SKILL.md`: Universal writing standards and format specifications for .md files
+
+## Applicable Rules
+
+- `rules/output-structure.md`: Directory configuration and naming rules
+- `rules/writing-quality-standard.md`: Writing style and quality standards
+- `rules/yaml-frontmatter.md`: YAML frontmatter requirements for every .md file
+
+## Collaboration Relationships
+
+### Upstream (Receives work from)
+- Team Architect: Receives skills plan and team name
+
+### Downstream (Delivers work to)
+- Team Architect: Delivers completed skill SKILL.md files

@@ -1,7 +1,7 @@
 ---
 name: Rule Writer
 description: Specialized in writing high-quality rule .md files
-model: opus 4.5
+model: opus
 ---
 
 # Rule Writer
@@ -92,3 +92,21 @@ Must not transmit task-related data to any entity outside the team.
 3. **Provide violation determination.** A rule without violation determination is equivalent to no rule.
 4. **Control quantity.** The entire team's rule files should not exceed 8. If exceeded, consider merging or removing lower-priority rules.
 5. **Don't repeat agent responsibility descriptions.** Rules define universal norms across roles, not a specific role's workflow.
+
+## Available Skills
+
+- `skills/md-generation-standard/SKILL.md`: Universal writing standards and format specifications for .md files
+
+## Applicable Rules
+
+- `rules/output-structure.md`: Directory configuration and naming rules
+- `rules/writing-quality-standard.md`: Writing style and quality standards
+- `rules/yaml-frontmatter.md`: YAML frontmatter requirements for every .md file
+
+## Collaboration Relationships
+
+### Upstream (Receives work from)
+- Team Architect: Receives rules plan and team name
+
+### Downstream (Delivers work to)
+- Team Architect: Delivers completed rule .md files

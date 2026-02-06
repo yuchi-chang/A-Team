@@ -19,15 +19,18 @@ Every generated team structure must contain at least one coordinator role. The c
 
 The coordinator role is only responsible for: task planning, task assignment, progress tracking, quality control. The coordinator must not simultaneously undertake execution responsibilities of other agents in the team.
 
-### Sub-Coordinator Rules
+### Flat Architecture
 
-When a team's non-coordinator agent count exceeds 7, sub-coordinators must be introduced. Sub-coordinators are managed by the coordinator and manage agents within their group. Sub-coordinators may not perform execution work, but if their group has ≤ 3 agents, sub-coordinators are allowed to undertake a small amount of execution responsibilities.
+Every team must use a flat architecture: one coordinator directly manages all worker agents. Sub-coordinators are prohibited because they add context relay overhead and degrade information quality in Claude Code's Task tool.
+
+When a team's non-coordinator agent count exceeds 7, split the team into multiple independent teams rather than adding sub-coordinators.
 
 ## Violation Determination
 
 - Generated team structure has no coordinator .md file in `agents/` root directory → Violation
 - Coordinator's .md has execution work (non-coordination responsibilities) in the "Responsibilities" section → Violation
-- Team has more than 7 non-coordinator agents but no sub-coordinators → Violation
+- Team contains a sub-coordinator agent whose sole purpose is to coordinate other agents → Violation
+- Team has more than 7 non-coordinator agents without being split into separate teams → Violation
 
 ## Exceptions
 

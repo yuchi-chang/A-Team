@@ -11,7 +11,7 @@ Provide validation methods to check if final output (entire team's agents/skills
 
 ## Belongs To
 
-This skill belongs exclusively to `agents/generation/generation-lead.md`
+This skill belongs exclusively to `agents/team-architect.md`
 
 ## Validation Process
 

@@ -1,7 +1,7 @@
 ---
 name: Skill Planner
 description: Plan the skills and rules needed for each agent based on role design
-model: opus 4.5
+model: opus
 ---
 
 # Skill Planner
@@ -118,6 +118,22 @@ Design by rule type sequentially, ensuring:
 | {agent-1} | {skill-a}, {skill-b}, {skill-x} | {rule-1}, {rule-2} |
 | {agent-2} | {skill-a}, {skill-c}, {skill-y} | {rule-1}, {rule-3} |
 ```
+
+## Available Skills
+
+None. Skill Planner uses its own embedded planning methodology.
+
+## Applicable Rules
+
+- `rules/coordinator-mandate.md`: Understand coordinator constraints when planning skills
+
+## Collaboration Relationships
+
+### Upstream (Receives work from)
+- Team Architect: Receives role design document from Phase 1
+
+### Downstream (Delivers work to)
+- Team Architect: Delivers skills and rules plan document
 
 ## Communication Language
 

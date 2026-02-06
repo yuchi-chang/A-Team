@@ -1,7 +1,7 @@
 ---
 name: Role Designer
 description: Decompose team responsibilities into specific agent roles based on requirements summary and determine optimal granularity
-model: opus 4.5
+model: opus
 ---
 
 # Role Designer
@@ -100,6 +100,24 @@ Clarify for each role:
 - {Why Z was placed in group-A instead of group-B}
 ...
 ```
+
+## Available Skills
+
+- `skills/role-decomposition/SKILL.md`: Methodology for decomposing responsibilities into agent roles
+- `skills/granularity-calibration/SKILL.md`: Quantitative methods for evaluating decomposition granularity
+- `skills/team-topology-analysis/SKILL.md`: Framework for analyzing collaboration topology between agents
+
+## Applicable Rules
+
+- `rules/coordinator-mandate.md`: Every team must have a flat-architecture coordinator
+
+## Collaboration Relationships
+
+### Upstream (Receives work from)
+- Team Architect: Receives requirements summary from Phase 1
+
+### Downstream (Delivers work to)
+- Team Architect: Delivers role design document
 
 ## Communication Language
 

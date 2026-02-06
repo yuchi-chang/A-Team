@@ -7,7 +7,7 @@ description: Specify directory configuration and naming rules for all generated 
 
 ## Applicability
 
-- Applies to: `generation-lead`, `agent-writer`, `skill-writer`, `rule-writer`
+- Applies to: `team-architect`, `agent-writer`, `skill-writer`, `rule-writer`
 
 ## Rule Content
 

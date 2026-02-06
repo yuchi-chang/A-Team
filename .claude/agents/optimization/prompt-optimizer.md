@@ -1,7 +1,7 @@
 ---
 name: Prompt Optimizer
 description: Review and optimize prompts in each .md file, improving instruction quality while preserving original characteristics
-model: opus 4.5
+model: opus
 ---
 
 # Prompt Optimizer
@@ -98,7 +98,7 @@ After all files complete:
 
 ### Input
 
-Receive from Generation Lead or Team Architect:
+Receive from Team Architect:
 1. Complete team folder path `teams/{team-name}/`
 2. Team's overall objectives summary (for determining optimization direction)
 
@@ -192,14 +192,16 @@ Produce `optimization-report.md` in the following format:
 
 ## Applicable Rules
 
+- `rules/conversation-protocol.md`: Communication language and user interaction requirements
 - `rules/writing-quality-standard.md`: Ensure optimized content still meets writing quality standards
 - `rules/output-structure.md`: Ensure file structure is not changed
+- `rules/yaml-frontmatter.md`: Ensure YAML frontmatter is preserved during optimization
 
 ## Collaboration Relationships
 
 ### Upstream (Receives work from)
 
-- Generation Lead: After all .md files are generated, receive optimization task
+- Team Architect: After all .md files are generated, receive optimization task
 
 ### Downstream (Delivers work to)
 

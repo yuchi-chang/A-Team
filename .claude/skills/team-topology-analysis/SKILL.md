@@ -49,7 +49,7 @@ Coordinator → [GroupA: A1 → A2] → Review → [GroupB: B1, B2] → Final
 1. **Bottleneck detection**: Is any agent the upstream of 3+ other agents simultaneously?
 2. **Island detection**: Is any agent without any interaction with other team members?
 3. **Cycle detection**: Does A→B→C→A circular dependency exist? (review cycles excluded)
-4. **Coordinator load**: Does coordinator directly manage more than 7 agents? If so, recommend sub-coordinators.
+4. **Coordinator load**: Does coordinator directly manage more than 7 agents? If so, recommend splitting into separate teams.
 
 ## Quality Checkpoints
 

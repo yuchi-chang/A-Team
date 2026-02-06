@@ -26,7 +26,7 @@ All .md files must begin with YAML frontmatter in the following format:
 ---
 name: {Agent name, English}
 description: {One sentence description}
-model: opus 4.5
+model: opus
 ---
 ```
 
